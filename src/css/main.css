@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --primary-color: #0891b2;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  color: #333;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 992px;
+  }
+}
+
+.about-me {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: var(--primary-color);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.about-me::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -102%;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transform: rotate(-8deg) scale(1.6);
+  z-index: -1;
+}
+
+@media (min-width: 992px) {
+  .about-me .container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.about-me .image {
+  margin-bottom: 35px;
+  box-shadow: 5px 5px 10px rgb(0 0 0 / 25%);
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .about-me .image {
+    width: 40%;
+    margin: 0;
+  }
+}
+.about-me .image img {
+  max-width: 100%;
+  display: block;
+}
+.about-me .image h1 {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: #ffffff;
+}
+.about-me .about-box {
+  padding: 20px;
+  background-color: white;
+  box-shadow: 5px 5px 10px rgb(0 0 0 / 25%);
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .about-me .about-box {
+    text-align: left;
+    width: 60%;
+  }
+}
+
+.about-me .about-box p {
+  color: #575757;
+  line-height: 1.6;
+  margin: 20px 0;
+}
+.about-me .about-box .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+@media (min-width: 992px) {
+  .about-me .about-box .links {
+    justify-content: flex-end;
+  }
+}
+.about-me .about-box a svg {
+  width: 25px;
+}
+
+.work {
+  padding: 40px 0;
+}
+.work h2 {
+  margin-bottom: 35px;
+}
+
+.work .work-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.work .work-content .card {
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 5px 5px 10px rgb(0 0 0 / 25%);
+}
+@media (min-width: 768px) {
+  .work .work-content .card {
+    width: calc((100% - 40px) / 2);
+  }
+}
+@media (min-width: 992px) {
+  .work .work-content .card {
+    width: calc((100% - 80px) / 3);
+  }
+}
+.work .work-content .card img {
+  max-width: 100%;
+}
+.work .work-content .card .info {
+  padding: 10px 15px 15px 15px;
+}
+.work .work-content .card h3 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 22px;
+}
+
+.work .work-content .card .links {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  align-items: center;
+}
+.work .work-content .card .links svg {
+  width: 25px;
+}
+
+.work .work-content .card p {
+  color: #575757;
+  line-height: 1.4;
+  margin: 10px 0 0;
+}
+
+footer {
+  padding: 40px 0;
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  footer {
+    text-align: left;
+  }
+  footer .container {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  footer .contact {
+    width: calc(50% - 30px);
+  }
+}
+@media (min-width: 992px) {
+  footer .contact {
+    width: 30%;
+  }
+}
+footer .contact h2 {
+  color: white;
+}
+footer .contact > p {
+  line-height: 1.6;
+  margin: 10px 0 25px;
+}
+footer .contact address {
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+footer .contact .contact-box p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  footer .contact .contact-box p {
+    justify-content: flex-start;
+  }
+}
+footer .contact .contact-box svg {
+  width: 24px;
+  fill: white;
+}
+footer .contact .links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 28px;
+}
+
+@media (min-width: 768px) {
+  footer .contact .links {
+    justify-content: flex-start;
+  }
+}
+
+footer .contact .links svg {
+  width: 30px;
+}
+
+footer img {
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  footer img {
+    width: 50%;
+    height: 500px;
+    margin: auto;
+  }
+}
+@media (min-width: 992px) {
+  footer img {
+    width: 70%;
+  }
+}
